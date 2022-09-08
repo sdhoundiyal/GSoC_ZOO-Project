@@ -1,1 +1,0 @@
-print("Stay the path")
