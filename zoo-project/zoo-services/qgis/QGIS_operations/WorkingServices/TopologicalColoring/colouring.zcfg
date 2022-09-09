@@ -1,4 +1,4 @@
-[SamplePointsInPolygon]
+[TopologicalColoring]
  Title = Point sampling inside polygons
  Abstract = Given some parameters and strategy sample points inside polygons
  Profile = urn:ogc:wps:1.0.0:buffer
