@@ -62,7 +62,7 @@ def ApplyAffineTransform(conf,inputs,outputs):
 	#set rotation around the Z-axis
 	rotationZValue=inputs['rotationZ']
 	#set the destination for the transformed geometry
-	outputGeometrydeltaX=outputs['outputGeometry']
+	outputGeometry=outputs['outputGeometry']
 
 	#check if the scale factor for X direction is 0
     if scaleX==0:
@@ -88,12 +88,14 @@ def ApplyAffineTransform(conf,inputs,outputs):
             'SCALE_Z':scaleZ,
             'SCALE_M':scaleM,
             'ROTATION_Z':rotationZ,
-            'INPUT':sourceFile,
-            'OUTPUT':destinationFile,  
+            'INPUT':inputGeometry,
+            'OUTPUT':outputGeometry,  
         }
         #apply the transform
         processing.run(algorithmToApply,transformParameters)
+
         #send success message
         return zoo.SERVICE_SUCCEEDED
+        
     #send failure message
     return zoo.SERVICE_FAILED
