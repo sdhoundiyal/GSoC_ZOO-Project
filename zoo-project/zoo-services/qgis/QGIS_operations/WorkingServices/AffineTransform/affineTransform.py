@@ -58,11 +58,6 @@ rotationZValue=0
 destinationFileAddress='F:/GSOC22/Files/Affine transform/transformed_UttarPradesh.geojson'
 
 
-#define a function that connects to the ZOO-Project
-def zooAffineTranform
-
-
-
 qgisAffineTransform(sourceFileAddress,
                     deltaXValue,
                     deltaYValue,
